@@ -2,20 +2,20 @@ import sys
 
 def main():
     if len(sys.argv) < 3:
-        print("引数が足りない！")
+        print('illigal inputs; usage: python leapmonth.py year month')
         return
     if not sys.argv[1].isdecimal() or not sys.argv[2].isdecimal():
-        print("引数は数字で！")
+        print('illigal inputs; usage: python leapmonth.py year month')
         return
 
     year = int(sys.argv[1])
     month = int(sys.argv[2])
 
     if year <= 1:
-        print("yearは正の整数で！")
+        print('illigal inputs; usage: python leapmonth.py year month')
         return
     if month <= 0 or 13 <= month:
-        print("monthは1-12の範囲で！")
+        print('illigal inputs; usage: python leapmonth.py year month')
         return
     days = 0
     if month == 2:
